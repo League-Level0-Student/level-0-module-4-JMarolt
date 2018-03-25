@@ -29,6 +29,10 @@ System.out.println(keyCode);
 String a = "apple";
 String b = "banana";
 String c = "carrot";
+		Integer.parseInt(a);
+	if(a.equals(65))		{
+		
+	}
 		
 
 		
