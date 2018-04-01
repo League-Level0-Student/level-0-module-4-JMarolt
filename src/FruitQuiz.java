@@ -9,12 +9,13 @@ import java.awt.event.KeyEvent;
 import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class FruitQuiz extends KeyAdapter {
 
 	void makeQuestions() {
-		question1 = new JLabel(
-				"<html>Which is not a real animal? <br> A: Flubber Monkey <br> B: Pink Fairy Armadillo <br> C: Dumbo Octopus</html>");
+		question1 = new JLabel("<html>Which is not a real color? <br> A: Expo <br> B: Ao <br> C: Rackley</html>");
+		question2 = new JLabel("<html>Which is not a real fruit? <br> D: A Durian <br> E: A Hotpocket <br> F: A Pitaya</html>");
 		// 11. Make another question called "question2"
 		
 	}
@@ -26,30 +27,51 @@ public class FruitQuiz extends KeyAdapter {
 		
 System.out.println(keyCode);
 		// 2. Make 3 variables that hold the key codes for apple, banana and carrot
-String a = "apple";
-String b = "banana";
-String c = "carrot";
-		Integer.parseInt(a);
-	if(a.equals(65))		{
-		
-	}
-		
+int a = 65;
+int b = 66;
+int c = 67;
 
+	
+	if(keyCode == 65) {
+		JOptionPane.showMessageDialog(null, "Correct!");
+
+	}
+		if(keyCode == 66) {
+			JOptionPane.showMessageDialog(null, "Incorrect!");
+		}
+if(keyCode == 67) {
+	JOptionPane.showMessageDialog(null, "Incorrect!");
+}
 		
 		if (question1.isShowing()) {
 			// 3. If they touched the right fruit, do steps 4 and 7
 			
 				// 4. Call the correct() method
 				
-				// 7. Use the nextQuestion() method to go to question2
-			
-			
+			}	// 7. Use the nextQuestion() method to go to question2
+			if(keyCode == 65){
+				
+		nextQuestion(question2);
+			}
+			int d = 68;
+			int e = 69;
+			int f = 70;
+
+			if(keyCode == 68) {
+				JOptionPane.showMessageDialog(null, "Incorrect!");
+			}
+			if(keyCode == 69) {
+				JOptionPane.showMessageDialog(null, "Correct!");
+			}
+			if(keyCode == 70) {
+				JOptionPane.showMessageDialog(null, "Incorrect!");
+			}
 			// 8. else (if they touched something else)
 				
 				// 9. Call the incorrect() method
 			
 
-		}
+		
 
 		// 12. If question2 is showing,
 		
